@@ -77,7 +77,7 @@ Blackspot evaluation logic
 Analytics update
 
 UML Activity Diagram:
-
+![UML Diagram](https://github.com/ntwari-cedric/ntwari-cedric-pl-sql_final_project_28228_ntwari_cedric/blob/main/UML%20diagram.png?raw=true)
 
 # 5.3 Phase II Explanation
 
