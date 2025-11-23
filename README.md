@@ -45,3 +45,42 @@ The system is built on a relational structure featuring 5 core tables:
 | **USERS** | System access and user roles (Admin, Analyst, Operator). | `Role`, `Username`. |
 | **ANALYTICS** | Summary data for BI reporting based on time periods. | `Time Period`, `Total Accidents`, `Fatal Accidents`. |
 
+## 5. Phase II – Business Process Modeling (UML & BPMN)
+
+This phase models the core business workflow of the Road Accident Reporting & Blackspot Detection System using BPMN and UML diagrams. These diagrams describe how accident information flows from field reporting to automated blackspot updates.
+
+# 5.1 BPMN Diagram – Accident Reporting & Blackspot Detection
+
+The BPMN diagram represents:
+
+Accident reporting by officers
+
+Data validation and storage
+
+Trigger-based blackspot calculation
+
+Risk-level notification
+
+BPMN Diagram:
+
+
+# 5.2 UML Activity Diagram – System Workflow
+
+The UML Activity Diagram illustrates the technical workflow:
+
+Actor interactions
+
+Accident record processing
+
+Blackspot evaluation logic
+
+Analytics update
+
+UML Activity Diagram:
+
+
+# 5.3 Phase II Explanation
+
+The system follows a structured accident reporting workflow. Traffic officers submit accident data (severity, location, injuries, deaths) into the system. After validation, the data is saved into the ACCIDENTS table. A PL/SQL trigger evaluates whether the accident location meets the threshold to be classified as a blackspot and updates the BLACKSPOTS table automatically.
+
+The BPMN diagram shows the business flow between users and the system, while the UML activity diagram shows the internal system operations. Together, they demonstrate how the system supports MIS objectives such as faster reporting, automated risk detection, and improved road-safety decision-making.
