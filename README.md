@@ -202,3 +202,7 @@ USERS
 5. BLACKSPOTS table is maintained automatically by PL/SQL triggers.
 
 6. GPS coordinates are stored as unique identifiers for locations.
+
+## 6.5 EER DIAGRAM
+![EER Diagram](https://github.com/ntwari-cedric/ntwari-cedric-pl-sql_final_project_28228_ntwari_cedric/blob/main/EER%20Diagram.png?raw=true)
+ 
