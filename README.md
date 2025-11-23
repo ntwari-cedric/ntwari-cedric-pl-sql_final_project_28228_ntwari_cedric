@@ -62,7 +62,7 @@ Trigger-based blackspot calculation
 Risk-level notification
 
 BPMN Diagram:
-
+![BPMN Diagram](https://github.com/ntwari-cedric/ntwari-cedric-pl-sql_final_project_28228_ntwari_cedric/blob/main/bpmn%20diagram.png?raw=true)
 
 # 5.2 UML Activity Diagram – System Workflow
 
