@@ -49,22 +49,22 @@ The system is built on a relational structure featuring 5 core tables:
 
 This phase models the core business workflow of the Road Accident Reporting & Blackspot Detection System using BPMN and UML diagrams. These diagrams describe how accident information flows from field reporting to automated blackspot updates.
 
-# 5.1 BPMN Diagram – Accident Reporting & Blackspot Detection
+## 5.1 BPMN Diagram – Accident Reporting & Blackspot Detection
 
 The BPMN diagram represents:
 
-Accident reporting by officers
+-Accident reporting by officers
 
-Data validation and storage
+-Data validation and storage
 
-Trigger-based blackspot calculation
+-Trigger-based blackspot calculation
 
-Risk-level notification
+-Risk-level notification
 
 BPMN Diagram:
 ![BPMN Diagram](https://github.com/ntwari-cedric/ntwari-cedric-pl-sql_final_project_28228_ntwari_cedric/blob/main/bpmn%20diagram.png?raw=true)
 
-# 5.2 UML Activity Diagram – System Workflow
+## 5.2 UML Activity Diagram – System Workflow
 
 The UML Activity Diagram illustrates the technical workflow:
 
@@ -79,7 +79,7 @@ Analytics update
 UML Activity Diagram:
 ![UML Diagram](https://github.com/ntwari-cedric/ntwari-cedric-pl-sql_final_project_28228_ntwari_cedric/blob/main/UML%20diagram.png?raw=true)
 
-# 5.3 Phase II Explanation
+## 5.3 Phase II Explanation
 
 The system follows a structured accident reporting workflow. Traffic officers submit accident data (severity, location, injuries, deaths) into the system. After validation, the data is saved into the ACCIDENTS table. A PL/SQL trigger evaluates whether the accident location meets the threshold to be classified as a blackspot and updates the BLACKSPOTS table automatically.
 
