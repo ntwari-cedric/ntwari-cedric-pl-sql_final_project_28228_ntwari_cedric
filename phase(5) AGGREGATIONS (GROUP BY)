@@ -1,0 +1,19 @@
+-- AGGREGATION 1: Accident statistics grouped by severity level
+SELECT 
+    severity,
+    COUNT(*) as accident_count,
+    SUM(injuries) as total_injuries,
+    SUM(deaths) as total_deaths,
+    ROUND(AVG(injuries), 2) as avg_injuries_per_accident
+FROM accidents
+GROUP BY severity
+ORDER BY total_deaths DESC;
+
+-- AGGREGATION 2: Most common accident causes
+SELECT 
+    cause,
+    COUNT(*) as accident_count,
+    ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM accidents), 2) as percentage
+FROM accidents
+GROUP BY cause
+ORDER BY accident_count DESC;
