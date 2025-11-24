@@ -1,0 +1,25 @@
+-- JOIN 1: Get complete accident reports with location details
+SELECT 
+    a.accident_id,
+    l.road_name,
+    a.date_time,
+    a.severity,
+    a.cause,
+    a.injuries,
+    a.deaths,
+    l.gps_coordinates
+FROM accidents a
+JOIN locations l ON a.location_id = l.location_id
+ORDER BY a.date_time DESC;
+
+-- JOIN 2: All locations with their accident statistics
+SELECT 
+    l.location_id,
+    l.road_name,
+    COUNT(a.accident_id) as total_accidents,
+    NVL(SUM(a.injuries), 0) as total_injuries,
+    NVL(SUM(a.deaths), 0) as total_deaths
+FROM locations l
+LEFT JOIN accidents a ON l.location_id = a.location_id
+GROUP BY l.location_id, l.road_name
+ORDER BY total_accidents DESC;
