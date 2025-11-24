@@ -1,0 +1,35 @@
+-- SUBQUERY 1: Locations with more accidents than average
+SELECT 
+    road_name,
+    accident_count
+FROM (
+    SELECT 
+        l.road_name,
+        COUNT(a.accident_id) as accident_count
+    FROM locations l
+    LEFT JOIN accidents a ON l.location_id = l.location_id
+    GROUP BY l.road_name
+) 
+WHERE accident_count > (
+    SELECT AVG(accident_count) 
+    FROM (
+        SELECT COUNT(a.accident_id) as accident_count
+        FROM locations l
+        LEFT JOIN accidents a ON l.location_id = l.location_id
+        GROUP BY l.road_name
+    )
+)
+ORDER BY accident_count DESC;
+
+-- SUBQUERY 2: Serious and fatal accidents with location context
+SELECT 
+    accident_id,
+    date_time,
+    severity,
+    cause,
+    injuries,
+    deaths,
+    (SELECT road_name FROM locations WHERE location_id = a.location_id) as road_name
+FROM accidents a
+WHERE severity IN ('Serious', 'Fatal')
+ORDER BY deaths DESC, injuries DESC;
