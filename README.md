@@ -79,7 +79,7 @@ Analytics update
 UML Activity Diagram:
 ![UML Diagram](https://github.com/ntwari-cedric/ntwari-cedric-pl-sql_final_project_28228_ntwari_cedric/blob/main/UML%20diagram.png?raw=true)
 
-## 2.3 Phase II Explanation
+## 2.3 Explanation
 
 The system follows a structured accident reporting workflow. Traffic officers submit accident data (severity, location, injuries, deaths) into the system. After validation, the data is saved into the ACCIDENTS table. A PL/SQL trigger evaluates whether the accident location meets the threshold to be classified as a blackspot and updates the BLACKSPOTS table automatically.
 
@@ -237,28 +237,33 @@ Successfully executed all CREATE TABLE statements with proper constraints,
 primary keys, foreign keys, and business rules. The foundation of our Road
 Accident Reporting System is now structurally complete and ready for data
 management operations.
-![table creation](https://github.com/ntwari-cedric/pl-sql_final_project_28228_ntwari_cedric/blob/main/table%20creation.png?raw=true)
+![table creation]
+(https://github.com/ntwari-cedric/pl-sql_final_project_28228_ntwari_cedric/blob/main/table%20creation.png?raw=true)
 ## Automated Primary Key Sequences
 Implemented Oracle sequences for all primary key columns to ensure unique
 identifier generation. This automated system guarantees data integrity and
 prevents duplicate entries while supporting scalable data growth across
 all entity tables
+
 ![primary key sequences](https://github.com/ntwari-cedric/pl-sql_final_project_28228_ntwari_cedric/blob/main/create%20sequence%20id.png?raw=true)
 ## Geographical Road Locations Data
 Populated the LOCATIONS table with 15 authentic Kigali road segments
 complete with GPS coordinates. This geographical foundation enables
 precise accident mapping and blackspot detection analysis throughout
-the city's road network. 
+the city's road network.
+
 ![table location](https://github.com/ntwari-cedric/pl-sql_final_project_28228_ntwari_cedric/blob/main/location%20table.png?raw=true)
 ## Comprehensive Accident Records
 Loaded 10 detailed accident reports demonstrating various severity levels
 (Minor, Serious, Fatal) and diverse causes. Each record includes casualty
 statistics, timestamps, and location references for comprehensive traffic
 safety analysis and reporting.
+
 ![table accident](https://github.com/ntwari-cedric/pl-sql_final_project_28228_ntwari_cedric/blob/main/accident%20table.png?raw=true)
 ## Role-Based User Management System
 Configured 5 system user accounts with distinct roles (Admin, Analyst, Operator)
 implementing role-based access control. This security structure ensures
 appropriate data access levels while maintaining system integrity and
 audit compliance.
+
 ![table user](https://github.com/ntwari-cedric/pl-sql_final_project_28228_ntwari_cedric/blob/main/user%20table.png?raw=true)
