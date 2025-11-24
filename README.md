@@ -231,3 +231,4 @@ Commands (Executed inside the PDB):
 
 after doing all thing ( creating and config the plugable database i create i connect it to my oracle sql developer where all the remaining phase will take place
 
+## TABLE IMPLEMENTATION & DATA INSERTION (phase V)
