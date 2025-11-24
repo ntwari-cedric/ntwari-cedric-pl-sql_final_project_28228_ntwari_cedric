@@ -237,8 +237,7 @@ Successfully executed all CREATE TABLE statements with proper constraints,
 primary keys, foreign keys, and business rules. The foundation of our Road
 Accident Reporting System is now structurally complete and ready for data
 management operations.
-![table creation]
-(https://github.com/ntwari-cedric/pl-sql_final_project_28228_ntwari_cedric/blob/main/table%20creation.png?raw=true)
+![table creation](https://github.com/ntwari-cedric/pl-sql_final_project_28228_ntwari_cedric/blob/main/table%20creation.png?raw=true)
 ## Automated Primary Key Sequences
 Implemented Oracle sequences for all primary key columns to ensure unique
 identifier generation. This automated system guarantees data integrity and
