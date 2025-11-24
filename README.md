@@ -266,3 +266,5 @@ appropriate data access levels while maintaining system integrity and
 audit compliance.
 
 ![table user](https://github.com/ntwari-cedric/pl-sql_final_project_28228_ntwari_cedric/blob/main/user%20table.png?raw=true)
+
+## Database Interaction & Transactions(PHASE VI)
