@@ -221,7 +221,7 @@ tue_28228_cedric_roadaccident_db.
 Dedicated tablespaces were created for data, indexes, and temporary files. All data files use the AUTOEXTEND ON parameter.
 
 Commands (Executed inside the PDB):
-![EER Diagram] (https://github.com/ntwari-cedric/ntwari-cedric-pl-sql_final_project_28228_ntwari_cedric/blob/main/EER%20Diagram.png?raw=true)
+![configaration of pdb](https://github.com/ntwari-cedric/pl-sql_final_project_28228_ntwari_cedric/blob/main/configuration.png?raw=true)
 
 ## 4.3 User Setup and Application Credentials
 The main user for all object creation is road_accident_app, created with appropriate privileges (CONNECT, RESOURCE).
@@ -229,6 +229,5 @@ The main user for all object creation is road_accident_app, created with appropr
 Commands (Executed inside the PDB):
 ![EER Diagram] (https://github.com/ntwari-cedric/ntwari-cedric-pl-sql_final_project_28228_ntwari_cedric/blob/main/EER%20Diagram.png?raw=true)
 
-after doing all thing ( creating and config the plugable database i create i connect it to my oracle sql developer where all the remaining
-phase will take place
+after doing all thing ( creating and config the plugable database i create i connect it to my oracle sql developer where all the remaining phase will take place
 
