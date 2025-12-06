@@ -64,22 +64,9 @@ The BPMN diagram represents:
 BPMN Diagram:
 ![BPMN Diagram](https://github.com/ntwari-cedric/ntwari-cedric-pl-sql_final_project_28228_ntwari_cedric/blob/main/bpmn%20diagram.png?raw=true)
 
-## 2.2 UML Activity Diagram – System Workflow
 
-The UML Activity Diagram illustrates the technical workflow:
 
-Actor interactions
-
-Accident record processing
-
-Blackspot evaluation logic
-
-Analytics update
-
-UML Activity Diagram:
-![UML Diagram](https://github.com/ntwari-cedric/ntwari-cedric-pl-sql_final_project_28228_ntwari_cedric/blob/main/UML%20diagram.png?raw=true)
-
-## 2.3 Explanation
+## 2.2 Explanation
 
 The system follows a structured accident reporting workflow. Traffic officers submit accident data (severity, location, injuries, deaths) into the system. After validation, the data is saved into the ACCIDENTS table. A PL/SQL trigger evaluates whether the accident location meets the threshold to be classified as a blackspot and updates the BLACKSPOTS table automatically.
 
@@ -216,7 +203,28 @@ Objective: Create and configure Oracle pluggable database.
 The environment uses a dedicated Pluggable Database named 
 tue_28228_cedric_roadaccident_db.
 # Command (Executed as SYSDBA):
-![pdb creation](https://github.com/ntwari-cedric/pl-sql_final_project_28228_ntwari_cedric/blob/main/create%20pgbdata%20base.png?raw=true)
+```sql
+-- Phase IV: Database Creation for PDTAS
+-- Student: NTWARI CEDRIC (ID: 28228)
+-- Group: Tuesday (B)
+-- Date: December 2024
+
+-- Step 1: Create Pluggable Database
+CREATE PLUGGABLE DATABASE WED_28228_cedric_PDTAS_DB
+  ADMIN USER cedric_admin IDENTIFIED BY ntwari
+  ROLES = (DBA)
+  FILE_NAME_CONVERT = (
+    'C:\dbms_oracle\oradata\XE\pdbseed\',
+    'C:\dbms_oracle\oradata\XE\tue_28228_cedric_PDTAS_DB\'
+  );
+
+-- Step 2: Open PDB
+ALTER PLUGGABLE DATABASE tue_28228_CEDRIC_PDTAS_DB OPEN;
+ALTER PLUGGABLE DATABASE TUE_28228_CEDRIC_PDTAS_DB SAVE STATE;
+
+-- Step 3: Switch to PDB
+ALTER SESSION SET CONTAINER =TUE_28228_CEDRIC__PDTAS_DB;
+```
 ## 4.2 Tablespace Configuration and Storage
 Dedicated tablespaces were created for data, indexes, and temporary files. All data files use the AUTOEXTEND ON parameter.
 
